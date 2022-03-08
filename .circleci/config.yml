@@ -22,7 +22,7 @@ jobs:
       - run:
           name: install packages
           command: npm install
-      -run:
+      - run:
           name: compile
           command: bash ./scripts/cross_compile.sh armv8
       - save_cache:
