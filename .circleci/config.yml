@@ -25,6 +25,8 @@ jobs:
       - run:
           name: compile
           command: bash ./scripts/cross_compile.sh armv8
+      - store_artifacts:
+          path: ./build
       - save_cache:
           key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
           paths:
